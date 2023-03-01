@@ -8,13 +8,13 @@ import static com.codeborne.selenide.Selenide.*;
 public class GitHubPageTest {
 
     @BeforeAll
-    static void BeforeAll() {
+    static void beforeAll() {
         Configuration.browserSize = "1920x1080";
         Configuration.baseUrl = "https://github.com/";
     }
 
     @Test
-    void TextTest() {
+    void textTest() {
         $("[placeholder='Search GitHub']").setValue("Selenide").pressEnter();
         $$("ul.repo-list li").first().$("a").click();
         $("#wiki-tab").click();
