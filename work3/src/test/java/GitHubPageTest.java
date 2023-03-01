@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class GitHubPageTest {
 
     @BeforeAll
-    static void beforeAll() {
+    static void BeforeAll() {
         Configuration.browserSize = "1920x1080";
         Configuration.baseUrl = "https://github.com/";
     }
